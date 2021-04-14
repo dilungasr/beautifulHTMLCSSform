@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto-Regular.ttf")
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./steve-ody-hzs94KNHqng-unsplash.jpg");
+    background-size: cover;
+}
+
+.form-wrapper {
+    position: relative;
+    width: 80%; 
+    max-width: 350px;
+    height: 300px;
+    background-color: rgba(20, 21, 25, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+    border-radius: 17px;
+    transition: 0.5s ease-in-out;
+}
+
+.form-wrapper:hover {
+    box-shadow: 3px 3px 3px 0 rgba(20, 21, 23, .5), 
+    5px 5px 5px 0 rgba(20, 21, 23, .3);
+}
+
+form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    color: cyan;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+input[type="text"], 
+input[type="password"] {
+    height: 30px;
+    border-radius: 1em;
+    border: 0;
+    outline: none;
+    margin-bottom: 1em;
+    padding-left: 10px;
+    background-image: linear-gradient(white, grey);
+}
+
+::placeholder {
+    color: #555;
+    opacity: 1;
+}
+
+.actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 21px; 
+    height: 21px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    box-shadow: none;
+    outline: none;
+   background-color: white;
+   position: relative;
+   border-radius: 3px;
+
+}
+
+input[type="checkbox"]:before {
+    content: ""; 
+    width: 60%; 
+    height: 60%; 
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]:checked:before {
+    background-color: #97c122;
+}
+
+label {
+    color: white;
+    font-size: .8em;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    border-radius: 2em;
+    border: 0;
+    outline: none;
+    height: 2.1em;
+    width: 4.8em;
+    background-image: linear-gradient(#97c122 0%, #97c122 100%);
+    box-shadow: inset 1.5px 1.5px 1.5px 0 rgba(255, 255, 255, .5);
+}
+
+input[type="submit"]:hover {
+    box-shadow: inset 1.5px 1.5px 1.5px 0 rgba(255, 255, 255, .9);
+}
+
+.three-dots {
+    display: flex;
+    height: 30%;
+    align-items: flex-end;
+    padding-bottom: 5%;
+    width: 60px;
+    justify-content: space-between;
+}
+
+div[class$="dot"] {
+    width: 13px; 
+    height: 13px; 
+    border-radius: 50%;
+}
+
+.red-dot {
+    background-color: red;
+}
+
+.green-dot {
+    background-color: #97c122;
+}
+
+.cyan-dot {
+    background-color: cyan;
+}
+
